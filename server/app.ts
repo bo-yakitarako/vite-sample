@@ -2,6 +2,7 @@ import express from 'express';
 import { config } from 'dotenv';
 import path from 'path';
 import { createViteDevServer } from './viteServer';
+import { createWebSocketServer } from './webSocket';
 
 config();
 
@@ -19,3 +20,4 @@ app.listen(PORT, () => {
 createViteDevServer('./').then(({ router }) => {
   app.use(router);
 });
+createWebSocketServer();
