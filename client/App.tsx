@@ -1,5 +1,15 @@
 import React from 'react';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Control } from './Control';
+import { Display } from './Display';
 
 export const App: React.FC = () => {
-  return <div>そうです</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Control />} />
+        <Route path="/display" element={<Display />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
