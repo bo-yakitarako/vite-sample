@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node ./server-dist/app.js",
     "prod": "NODE_ENV=production node ./server-dist/app.js",
+    "dev": "nodemon",
     "server-build": "esbuild server/app.ts --bundle --minify --platform=node --target=node14 --outfile=server-dist/app.js --external:vite --external:express --external:socket.io",
     "client-build": "vite build",
     "build": "yarn server-build; yarn client-build",
