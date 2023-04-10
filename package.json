@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "start": "node ./server-dist/app.js",
-    "server-build": "esbuild server/app.ts --bundle --minify --platform=node --target=node14 --outfile=server-dist/app.js --external:vite --external:express --external:ws",
+    "server-build": "esbuild server/app.ts --bundle --minify --platform=node --target=node14 --outfile=server-dist/app.js --external:vite --external:express --external:socket.io",
     "client-build": "vite build",
     "build": "yarn server-build; yarn client-build",
     "docker": "cd docker; docker-compose up --build -d",
